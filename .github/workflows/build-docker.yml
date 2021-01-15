@@ -1,8 +1,7 @@
 name: Build docker Package
 
 on:
-  push:
-    branches: [ build/docker ]
+  workflow_dispatch:
 
 jobs:
   build:
