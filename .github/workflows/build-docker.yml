@@ -18,4 +18,4 @@ jobs:
       run: docker build . --file Dockerfile --tag docker.pkg.github.com/kacpergogol-htd/s3fs-docker:latest
 
     - name: Push docker image
-      run: docker push docker.pkg.github.com/kacpergogol-htd/s3fs-docker:latest
+      run: docker push docker.pkg.github.com/kacpergogol-htd/s3fs-docker/s3fs-docker:latest
