@@ -16,7 +16,7 @@ jobs:
       run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
 
     - name: Build docker image
-      run: docker build Dockerfile --tag docker.pkg.github.com/kacpergogol-htd/s3fs-docker:latest
+      run: docker build . --file Dockerfile --tag docker.pkg.github.com/kacpergogol-htd/s3fs-docker:latest
 
     - name: Push docker image
       run: docker push docker.pkg.github.com/kacpergogol-htd/s3fs-docker:latest
