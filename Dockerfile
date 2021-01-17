@@ -13,7 +13,7 @@ RUN ln -s /usr/local/bin/docker-entrypoint.sh / && \
 
 USER tape
 
-ENTRYPOINT ["docker-entrypoint.sh"]
+#ENTRYPOINT ["docker-entrypoint.sh"]
 
-#ENTRYPOINT ["/usr/bin/dumb-init", "--"]
-#CMD ["docker-entrypoint.sh"]
+ENTRYPOINT ["/usr/bin/dumb-init", "--"]
+CMD ["docker-entrypoint.sh"]
