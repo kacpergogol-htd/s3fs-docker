@@ -3,7 +3,7 @@
 
 TRIGGER_FILE=${TRIGGER_FILE:-.do_upload}
 SYNC_FROM=${SYNC_FROM:-/var/www/html/wp-content/s3}
-PARAMS=${PARAMS:---acl public-read --delete}
+PARAMS=${PARAMS:---acl public-read}
 BUCKET=${BUCKET:-zoomcms.htdwork.com}
 FILES_TO_REMOVE=${TRIGGER_FILE},.lock
 TTL=${TTL:-1200}
@@ -12,6 +12,7 @@ LOCKFILE=$SYNC_FROM/.lock
 
 while true
 do
+sleep 0.1
 
 if [ -f "$SYNC_FROM/$TRIGGER_FILE" ]; then
 
